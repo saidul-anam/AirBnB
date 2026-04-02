@@ -1,0 +1,111 @@
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.local
+.env.*.local
+*.env
+
+# ========================
+# Seed/demo credentials (do not commit by default)
+# ========================
+host_seed_passwords*.txt
+host_seed_passwords*.csv
+
+# ========================
+# Java / Maven
+# ========================
+**/target/
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+**/hs_err_pid*
+**/.mvn/wrapper/maven-wrapper.jar
+**/mvnw
+**/mvnw.cmd
+
+# ========================
+# Spring Boot
+# ========================
+**/application-local.yml
+**/application-local.properties
+
+# ========================
+# Node.js / React
+# ========================
+**/node_modules/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/build/
+**/.pnp
+**/.pnp.js
+**/coverage/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# ========================
+# Docker
+# ========================
+**/.docker/
+docker-compose.override.yml
+
+# ========================
+# IDE - IntelliJ IDEA
+# ========================
+.idea/
+**/*.iml
+**/*.iws
+**/*.ipr
+**/out/
+
+# ========================
+# IDE - VS Code
+# ========================
+.vscode/
+**/.vscode/
+
+# ========================
+# IDE - Eclipse
+# ========================
+**/.classpath
+**/.project
+**/.settings/
+**/bin/
+
+# ========================
+# OS Generated
+# ========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+**/logs/
+
+# ========================
+# Test Reports
+# ========================
+**/surefire-reports/
+**/test-results/
+
+# ========================
+# Misc
+# ========================
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
