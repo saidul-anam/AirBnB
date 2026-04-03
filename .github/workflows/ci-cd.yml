@@ -1,0 +1,151 @@
+name: Repo Recreation Tracker
+
+on:
+  push:
+    branches:
+      - main
+      - tanim
+      - dulal
+      - rumman
+      - ifty
+      - siam
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  track-recreation:
+    name: Track reconstruction progress
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Show event context
+        shell: bash
+        run: |
+          echo "Event   : ${{ github.event_name }}"
+          echo "Branch  : ${{ github.ref_name }}"
+          echo "Actor   : ${{ github.actor }}"
+          echo "Commit  : ${{ github.sha }}"
+
+      - name: Determine comparison base
+        id: base
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            echo "base_sha=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
+          elif [[ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]]; then
+            echo "base_sha=${{ github.event.before }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "base_sha=$(git rev-list --max-parents=0 HEAD)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: List changed files
+        id: changes
+        shell: bash
+        run: |
+          git diff --name-only "${{ steps.base.outputs.base_sha }}" "${{ github.sha }}" > changed_files.txt
+          echo "Changed files:"
+          cat changed_files.txt || true
+          {
+            echo "changed_files<<EOF"
+            cat changed_files.txt
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Reject generated directories
+        shell: bash
+        run: |
+          disallowed='^(frontend/node_modules/|frontend/build/|backend/monolith/target/)'
+          if grep -E "$disallowed" changed_files.txt > /tmp/disallowed.txt; then
+            echo "Generated files were committed. Remove these paths first:"
+            cat /tmp/disallowed.txt
+            exit 1
+          fi
+          echo "No generated directories were committed."
+
+      - name: Detect current reconstruction phase
+        id: phase
+        shell: bash
+        run: |
+          phase="phase-0"
+          if [[ -f "MODULAR_MONOLITH_STRUCTURE.md" && -f "docs/architecture.md" ]]; then
+            phase="phase-1"
+          fi
+          if [[ -f "backend/monolith/src/main/java/com/airbnb/monolith/config/MultipleMongoConfig.java" && -f "backend/monolith/src/main/java/com/airbnb/booking/controller/BookingController.java" ]]; then
+            phase="phase-2"
+          fi
+          if [[ -f "frontend/src/components/Navbar.jsx" && -f "frontend/src/pages/HomePage.jsx" ]]; then
+            phase="phase-3"
+          fi
+          if [[ -f "frontend/src/context/AuthContext.jsx" && -f "frontend/src/pages/PaymentPage.jsx" ]]; then
+            phase="phase-4"
+          fi
+          if [[ -f "frontend/src/components/BookingTimeline.jsx" && -f "render.yaml" && -f "docs/github-setup.md" ]]; then
+            phase="phase-5"
+          fi
+          echo "value=$phase" >> "$GITHUB_OUTPUT"
+          echo "Detected reconstruction state: $phase"
+
+      - name: Check milestone files
+        shell: bash
+        run: |
+          declare -a checkpoints=(
+            ".github/workflows/ci-cd.yml|Workflow present"
+            "README.md|Root README present"
+            "backend/monolith/pom.xml|Backend base present"
+            "frontend/package.json|Frontend base present"
+            "docs/architecture.md|Phase 1 docs present"
+            "backend/monolith/src/main/java/com/airbnb/booking/controller/BookingController.java|Phase 2 booking controller present"
+            "frontend/src/components/Navbar.jsx|Phase 3 shared UI present"
+            "frontend/src/context/AuthContext.jsx|Phase 4 auth frontend present"
+            "render.yaml|Phase 5 deployment file present"
+          )
+
+          {
+            echo "## Reconstruction Status"
+            echo ""
+            echo "- Detected phase: ${{ steps.phase.outputs.value }}"
+            echo "- Branch: \`${{ github.ref_name }}\`"
+            echo ""
+            echo "### Checkpoints"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          for checkpoint in "${checkpoints[@]}"; do
+            path="${checkpoint%%|*}"
+            label="${checkpoint##*|}"
+            if [[ -e "$path" ]]; then
+              echo "- [x] $label" >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "- [ ] $label" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
+
+      - name: Add changed files summary
+        shell: bash
+        run: |
+          {
+            echo ""
+            echo "### Changed Files In This Run"
+            echo ""
+            if [[ -s changed_files.txt ]]; then
+              sed 's/^/- /' changed_files.txt
+            else
+              echo "- No file changes detected"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload change list
+        uses: actions/upload-artifact@v4
+        with:
+          name: changed-files-${{ github.run_id }}
+          path: changed_files.txt
+          retention-days: 7
