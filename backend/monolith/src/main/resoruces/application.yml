@@ -1,0 +1,43 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: airbnb-monolith
+  data:
+    mongodb:
+      user:
+        uri: ${MONGO_URI_USER}
+      booking:
+        uri: ${MONGO_URI_BOOKING}
+      review:
+        uri: ${MONGO_URI_REVIEWS}
+      notification:
+        uri: ${MONGO_URI_NOTIFICATION}
+      availability:
+        uri: ${MONGO_URI_AVAILABILITY}
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiry: ${JWT_EXPIRY:86400000}
+  refresh-expiry: ${JWT_REFRESH_EXPIRY:604800000}
+
+supabase:
+  url: ${SUPABASE_URL}
+  key: ${SUPABASE_KEY}
+
+cors:
+  allowed-origins: ${FRONTEND_BASE_URL:http://localhost:3000}
+
+logging:
+  level:
+    root: INFO
+    com.airbnb: INFO
+    org.springframework.data.mongodb.core.MongoTemplate: INFO
