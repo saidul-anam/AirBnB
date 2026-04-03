@@ -1,0 +1,858 @@
+SAMPLE 5 HOSTS DETAILS
+========================
+
+HOST 1 DETAILS:
+================
+_id: nq6jyq5e2dp2kof9xjn3
+_class: "com.airbnb.user.model.User"
+userId: "635888d3-4384-44db-87e8-6d65edbec78c"
+email: "host1@gmail.com"
+password: "$2b$12$qfvtKxBnraUKMWRTajeKtuqh861kyso7Wb6AtYPairQltIsYIKWuW"
+firstName: "Host1"
+lastName: "Brown"
+phoneNumber: "+73940364779"
+profileImage: "https://images.unsplash.com/photo-1573352643?q=80&w=80&auto=format&fit=crop"
+bio: "Committed to providing five-star service. Your comfort and satisfaction are my top priorities."
+role: "HOST"
+status: "ACTIVE"
+emailVerified: true
+verificationStatus: "APPROVED"
+verificationRequestedAt: 2026-03-24T10:55:44.321Z
+verifiedAt: 2026-03-24T10:55:44.323Z
+street: "The Willow Crest Street"
+area: "Makassar"
+village: "Makassar Central"
+district: "Makassar"
+division: "Central"
+city: "Makassar"
+country: "Indonesia"
+zipCode: "83223"
+latitude: 13.4
+longitude: 40.9
+superhost: false
+hostDisplayName: "The Willow Crest by Host1"
+hostAbout: "Escape to our tranquil haven in Makassar. This property offers the perfect balance of convenience and serenity, allowing you to enjoy both the vibrant city life and peaceful relaxation. Modern amenities and thoughtful touches await you."
+hostingSince: 2026-03-24T10:55:44.326Z
+preferredCheckInTime: "15:00"
+preferredCheckOutTime: "12:00"
+responseTimeHours: 16
+houseRules: "No unauthorized guests. ID required."
+propertyTypesOffered: ["Loft", "Cottage"]
+offeringHighlights: ["Premium location in the heart of the city", "Modern amenities and comfortable furnishings", "Exceptional guest service and support"]
+hostPortfolioImages: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\exterior\image_39.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\view\image_38.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\bathroom\image_5.jpg"]
+guestCapacity: 8
+bedCount: 4
+bedTypes: [{type: "Sofa Bed", count: 3}, {type: "Queen", count: 2}]
+nightlyRateUsd: 97
+payLaterAllowed: false
+payoutPercentage: 75
+cancellationPolicy: "FLEXIBLE"
+totalListings: 3
+averageRating: 4.1
+reviewCount: 413
+responseRate: 87
+hostedProperties: Array(3)
+  Property 1:
+    propertyName: "The Willow Crest - Loft 1"
+    propertyType: "Loft"
+    description: "Escape to our tranquil haven in Makassar. This property offers the perfect balance of convenience and serenity, allowing you to enjoy both the vibrant city life and peaceful relaxation. Modern amenities and thoughtful touches await you."
+    guestCapacity: 8
+    bedCount: 2
+    bedroomCount: 1
+    bathroomCount: 2
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (8 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\bathroom\image_16.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\bathroom\image_13.jpg"...] (5 total)
+    nightlyRateUsd: 97
+    payLaterAllowed: false
+    cancellationPolicy: "FLEXIBLE"
+    bookingCapacity: 1
+    maxGuests: 6
+    minimumStay: 2
+    maximumStay: 18
+    sizeSqMeters: 132
+    floorNumber: 16
+    hasElevator: true
+    hasParking: true
+    hasPool: false
+    hasGym: false
+    hasWiFi: true
+    hasAirConditioning: true
+    hasHeating: false
+    hasKitchen: false
+    hasWasher: true
+    hasDryer: false
+    hasTV: true
+    hasWorkspace: true
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "16:00"
+    checkOutTime: "12:00"
+    securityDeposit: 427
+    cleaningFee: 84
+    serviceFee: 45
+    taxesAndFees: 5
+    weeklyDiscount: 6
+    monthlyDiscount: 21
+    instantBook: false
+    superhost: false
+  Property 2:
+    propertyName: "The Willow Crest - Cottage 2"
+    propertyType: "Cottage"
+    description: "Experience the perfect blend of comfort and style in our carefully curated space. Located in the vibrant Makassar, our property offers easy access to local attractions, dining, and entertainment. Whether you're here for business or leisure, you'll find everything you need for a memorable stay."
+    guestCapacity: 6
+    bedCount: 2
+    bedroomCount: 2
+    bathroomCount: 1
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (13 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\bedroom\image_25.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\view\image_35.jpg"...] (4 total)
+    nightlyRateUsd: 272
+    payLaterAllowed: false
+    cancellationPolicy: "MODERATE"
+    bookingCapacity: 4
+    maxGuests: 6
+    minimumStay: 1
+    maximumStay: 17
+    sizeSqMeters: 118
+    floorNumber: 1
+    hasElevator: true
+    hasParking: false
+    hasPool: false
+    hasGym: false
+    hasWiFi: true
+    hasAirConditioning: true
+    hasHeating: true
+    hasKitchen: true
+    hasWasher: false
+    hasDryer: true
+    hasTV: true
+    hasWorkspace: false
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "15:00"
+    checkOutTime: "12:00"
+    securityDeposit: 413
+    cleaningFee: 96
+    serviceFee: 43
+    taxesAndFees: 8
+    weeklyDiscount: 20
+    monthlyDiscount: 13
+    instantBook: true
+    superhost: false
+  Property 3:
+    propertyName: "The Willow Crest - Cottage 3"
+    propertyType: "Cottage"
+    description: "Immerse yourself in the local culture of Makassar from our comfortable and well-appointed accommodation. We've created a space that reflects the spirit of the city while providing all the comforts you expect from a premium stay."
+    guestCapacity: 5
+    bedCount: 4
+    bedroomCount: 2
+    bathroomCount: 2
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (15 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\bathroom\image_48.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\exterior\image_11.jpg"...] (4 total)
+    nightlyRateUsd: 257
+    payLaterAllowed: false
+    cancellationPolicy: "STRICT"
+    bookingCapacity: 1
+    maxGuests: 9
+    minimumStay: 2
+    maximumStay: 12
+    sizeSqMeters: 104
+    floorNumber: 1
+    hasElevator: false
+    hasParking: false
+    hasPool: true
+    hasGym: false
+    hasWiFi: true
+    hasAirConditioning: true
+    hasHeating: false
+    hasKitchen: true
+    hasWasher: true
+    hasDryer: true
+    hasTV: true
+    hasWorkspace: true
+    smokingAllowed: false
+    petsAllowed: true
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "15:00"
+    checkOutTime: "12:00"
+    securityDeposit: 281
+    cleaningFee: 40
+    serviceFee: 27
+    taxesAndFees: 17
+    weeklyDiscount: 8
+    monthlyDiscount: 23
+    instantBook: true
+    superhost: false
+createdAt: 2026-03-24T10:55:44.326Z
+updatedAt: 2026-03-24T10:55:44.326Z
+
+HOST 2 DETAILS:
+================
+_id: 1x9d6c4ofs47henlrtuh93
+_class: "com.airbnb.user.model.User"
+userId: "46415268-ccd8-4fc5-b4a4-79422048f791"
+email: "host2@gmail.com"
+password: "$2b$12$qfvtKxBnraUKMWRTajeKtuqh861kyso7Wb6AtYPairQltIsYIKWuW"
+firstName: "Host2"
+lastName: "Brown"
+phoneNumber: "+86366743219"
+profileImage: "https://images.unsplash.com/photo-1573040516?q=80&w=80&auto=format&fit=crop"
+bio: "Dedicated host ensuring a seamless stay. From check-in to check-out, I'm here to help."
+role: "HOST"
+status: "ACTIVE"
+emailVerified: true
+verificationStatus: "APPROVED"
+verificationRequestedAt: 2026-03-24T10:55:44.326Z
+verifiedAt: 2026-03-24T10:55:44.326Z
+street: "The Meridian Stay Street"
+area: "Edinburgh"
+village: "Edinburgh Central"
+district: "Edinburgh"
+division: "East"
+city: "Edinburgh"
+country: "UK"
+zipCode: "33189"
+latitude: 67.3
+longitude: 154.4
+superhost: false
+hostDisplayName: "The Meridian Stay by Host2"
+hostAbout: "Welcome to your urban oasis in Edinburgh. This thoughtfully designed space provides the ideal base for exploring the city's attractions. With attention to detail and guest comfort as our priority, we ensure a pleasant and hassle-free stay."
+hostingSince: 2026-03-24T10:55:44.326Z
+preferredCheckInTime: "14:00"
+preferredCheckOutTime: "12:00"
+responseTimeHours: 17
+houseRules: "No smoking. Quiet hours 10pm-8am."
+propertyTypesOffered: ["Villa"]
+offeringHighlights: ["Premium location in the heart of the city", "Modern amenities and comfortable furnishings", "Exceptional guest service and support"]
+hostPortfolioImages: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\living_room\image_41.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\view\image_1.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\exterior\image_19.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\bedroom\image_22.jpg"]
+guestCapacity: 6
+bedCount: 1
+bedTypes: [{type: "Double", count: 1}]
+nightlyRateUsd: 212
+payLaterAllowed: true
+payoutPercentage: 79
+cancellationPolicy: "STRICT"
+totalListings: 1
+averageRating: 3.8
+reviewCount: 73
+responseRate: 86
+hostedProperties: Array(1)
+  Property 1:
+    propertyName: "The Meridian Stay - Villa 1"
+    propertyType: "Villa"
+    description: "Experience the perfect blend of comfort and style in our carefully curated space. Located in the vibrant Edinburgh, our property offers easy access to local attractions, dining, and entertainment. Whether you're here for business or leisure, you'll find everything you need for a memorable stay."
+    guestCapacity: 6
+    bedCount: 1
+    bedroomCount: 3
+    bathroomCount: 1
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (11 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\exterior\image_44.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\dining_room\image_20.jpg"...] (4 total)
+    nightlyRateUsd: 212
+    payLaterAllowed: true
+    cancellationPolicy: "FLEXIBLE"
+    bookingCapacity: 4
+    maxGuests: 9
+    minimumStay: 2
+    maximumStay: 30
+    sizeSqMeters: 100
+    floorNumber: 15
+    hasElevator: true
+    hasParking: false
+    hasPool: true
+    hasGym: false
+    hasWiFi: true
+    hasAirConditioning: true
+    hasHeating: true
+    hasKitchen: true
+    hasWasher: false
+    hasDryer: true
+    hasTV: true
+    hasWorkspace: true
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "14:00"
+    checkOutTime: "11:00"
+    securityDeposit: 323
+    cleaningFee: 78
+    serviceFee: 39
+    taxesAndFees: 11
+    weeklyDiscount: 15
+    monthlyDiscount: 21
+    instantBook: true
+    superhost: false
+createdAt: 2026-03-24T10:55:44.326Z
+updatedAt: 2026-03-24T10:55:44.326Z
+
+HOST 3 DETAILS:
+================
+_id: nxrl8lz8ikxkzlttj3gi
+_class: "com.airbnb.user.model.User"
+userId: "40e05dcc-818c-4699-97d2-f3a81a221c5e"
+email: "host3@gmail.com"
+password: "$2b$12$qfvtKxBnraUKMWRTajeKtuqh861kyso7Wb6AtYPairQltIsYIKWuW"
+firstName: "Host3"
+lastName: "Johnson"
+phoneNumber: "+66863486568"
+profileImage: "https://images.unsplash.com/photo-1577180308?q=80&w=80&auto=format&fit=crop"
+bio: "Experienced superhost with hundreds of happy guests. Let me make your Venice trip unforgettable."
+role: "HOST"
+status: "ACTIVE"
+emailVerified: true
+verificationStatus: "APPROVED"
+verificationRequestedAt: 2026-03-24T10:55:44.326Z
+verifiedAt: 2026-03-24T10:55:44.326Z
+street: "Orchid Luxe Inn Street"
+area: "Venice"
+village: "Venice Central"
+district: "Venice"
+division: "West"
+city: "Venice"
+country: "Italy"
+zipCode: "79151"
+latitude: -41.1
+longitude: 88.5
+superhost: false
+hostDisplayName: "Orchid Luxe Inn by Host3"
+hostAbout: "Welcome to your urban oasis in Venice. This thoughtfully designed space provides the ideal base for exploring the city's attractions. With attention to detail and guest comfort as our priority, we ensure a pleasant and hassle-free stay."
+hostingSince: 2026-03-24T10:55:44.326Z
+preferredCheckInTime: "15:00"
+preferredCheckOutTime: "11:00"
+responseTimeHours: 7
+houseRules: "No parties. Respect neighbors."
+propertyTypesOffered: ["Penthouse", "Studio"]
+offeringHighlights: ["Premium location in the heart of the city", "Modern amenities and comfortable furnishings", "Exceptional guest service and support"]
+hostPortfolioImages: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\bedroom\image_14.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\exterior\image_10.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\bathroom\image_16.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\view\image_40.jpg"]
+guestCapacity: 5
+bedCount: 3
+bedTypes: [{type: "Queen", count: 1}, {type: "Double", count: 3}]
+nightlyRateUsd: 193
+payLaterAllowed: true
+payoutPercentage: 83
+cancellationPolicy: "MODERATE"
+totalListings: 3
+averageRating: 3.5
+reviewCount: 8
+responseRate: 91
+hostedProperties: Array(3)
+  Property 1:
+    propertyName: "Orchid Luxe Inn - Penthouse 1"
+    propertyType: "Penthouse"
+    description: "Escape to our tranquil haven in Venice. This property offers the perfect balance of convenience and serenity, allowing you to enjoy both the vibrant city life and peaceful relaxation. Modern amenities and thoughtful touches await you."
+    guestCapacity: 2
+    bedCount: 1
+    bedroomCount: 2
+    bathroomCount: 2
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (17 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\bathroom\image_5.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\kitchen\image_46.jpg"...] (4 total)
+    nightlyRateUsd: 215
+    payLaterAllowed: true
+    cancellationPolicy: "STRICT"
+    bookingCapacity: 2
+    maxGuests: 9
+    minimumStay: 2
+    maximumStay: 12
+    sizeSqMeters: 101
+    floorNumber: 12
+    hasElevator: false
+    hasParking: false
+    hasPool: true
+    hasGym: true
+    hasWiFi: true
+    hasAirConditioning: true
+    hasHeating: true
+    hasKitchen: false
+    hasWasher: true
+    hasDryer: false
+    hasTV: true
+    hasWorkspace: true
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "14:00"
+    checkOutTime: "10:00"
+    securityDeposit: 399
+    cleaningFee: 96
+    serviceFee: 11
+    taxesAndFees: 18
+    weeklyDiscount: 15
+    monthlyDiscount: 25
+    instantBook: true
+    superhost: false
+  Property 2:
+    propertyName: "Orchid Luxe Inn - Studio 2"
+    propertyType: "Studio"
+    description: "Escape to our tranquil haven in Venice. This property offers the perfect balance of convenience and serenity, allowing you to enjoy both the vibrant city life and peaceful relaxation. Modern amenities and thoughtful touches await you."
+    guestCapacity: 5
+    bedCount: 3
+    bedroomCount: 3
+    bathroomCount: 1
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (14 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\exterior\image_29.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\bathroom\image_11.jpg"...] (4 total)
+    nightlyRateUsd: 193
+    payLaterAllowed: true
+    cancellationPolicy: "FLEXIBLE"
+    bookingCapacity: 1
+    maxGuests: 5
+    minimumStay: 2
+    maximumStay: 13
+    sizeSqMeters: 60
+    floorNumber: 8
+    hasElevator: true
+    hasParking: false
+    hasPool: false
+    hasGym: false
+    hasWiFi: true
+    hasAirConditioning: false
+    hasHeating: true
+    hasKitchen: true
+    hasWasher: true
+    hasDryer: false
+    hasTV: true
+    hasWorkspace: true
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "15:00"
+    checkOutTime: "10:00"
+    securityDeposit: 128
+    cleaningFee: 89
+    serviceFee: 33
+    taxesAndFees: 15
+    weeklyDiscount: 6
+    monthlyDiscount: 19
+    instantBook: false
+    superhost: false
+  Property 3:
+    propertyName: "Orchid Luxe Inn - Penthouse 3"
+    propertyType: "Penthouse"
+    description: "Experience the perfect blend of comfort and style in our carefully curated space. Located in the vibrant Venice, our property offers easy access to local attractions, dining, and entertainment. Whether you're here for business or leisure, you'll find everything you need for a memorable stay."
+    guestCapacity: 5
+    bedCount: 2
+    bedroomCount: 2
+    bathroomCount: 1
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (9 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\dining_room\image_18.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\view\image_34.jpg"...] (3 total)
+    nightlyRateUsd: 245
+    payLaterAllowed: false
+    cancellationPolicy: "STRICT"
+    bookingCapacity: 5
+    maxGuests: 4
+    minimumStay: 1
+    maximumStay: 30
+    sizeSqMeters: 114
+    floorNumber: 1
+    hasElevator: false
+    hasParking: true
+    hasPool: false
+    hasGym: false
+    hasWiFi: true
+    hasAirConditioning: true
+    hasHeating: false
+    hasKitchen: true
+    hasWasher: true
+    hasDryer: true
+    hasTV: true
+    hasWorkspace: true
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "15:00"
+    checkOutTime: "10:00"
+    securityDeposit: 392
+    cleaningFee: 27
+    serviceFee: 29
+    taxesAndFees: 5
+    weeklyDiscount: 15
+    monthlyDiscount: 21
+    instantBook: false
+    superhost: false
+createdAt: 2026-03-24T10:55:44.326Z
+updatedAt: 2026-03-24T10:55:44.326Z
+
+HOST 4 DETAILS:
+================
+_id: rkgs4wnuni37h33ijfngo
+_class: "com.airbnb.user.model.User"
+userId: "de6795bc-d113-488f-ac5f-061127f5ea45"
+email: "host4@gmail.com"
+password: "$2b$12$qfvtKxBnraUKMWRTajeKtuqh861kyso7Wb6AtYPairQltIsYIKWuW"
+firstName: "Host4"
+lastName: "Johnson"
+phoneNumber: "+32764437439"
+profileImage: "https://images.unsplash.com/photo-1594860711?q=80&w=80&auto=format&fit=crop"
+bio: "Dedicated host ensuring a seamless stay. From check-in to check-out, I'm here to help."
+role: "HOST"
+status: "ACTIVE"
+emailVerified: true
+verificationStatus: "APPROVED"
+verificationRequestedAt: 2026-03-24T10:55:44.327Z
+verifiedAt: 2026-03-24T10:55:44.327Z
+street: "Serenity Cove Retreat Street"
+area: "Osaka"
+village: "Osaka Central"
+district: "Osaka"
+division: "North"
+city: "Osaka"
+country: "Japan"
+zipCode: "57955"
+latitude: 0.6
+longitude: -126
+superhost: false
+hostDisplayName: "Serenity Cove Retreat by Host4"
+hostAbout: "Discover your home away from home in the heart of Osaka. Our property combines modern amenities with warm hospitality to create the perfect retreat for travelers. Relax in comfortable surroundings and explore the best that {city} has to offer."
+hostingSince: 2026-03-24T10:55:44.327Z
+preferredCheckInTime: "16:00"
+preferredCheckOutTime: "12:00"
+responseTimeHours: 6
+houseRules: "Check-in after 3pm, check-out before 11am."
+propertyTypesOffered: ["Apartment", "Penthouse"]
+offeringHighlights: ["Premium location in the heart of the city", "Modern amenities and comfortable furnishings", "Exceptional guest service and support"]
+hostPortfolioImages: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\dining_room\image_2.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\bedroom\image_10.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\living_room\image_29.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\living_room\image_36.jpg"]
+guestCapacity: 8
+bedCount: 4
+bedTypes: [{type: "Double", count: 3}, {type: "King", count: 3}]
+nightlyRateUsd: 114
+payLaterAllowed: true
+payoutPercentage: 73
+cancellationPolicy: "STRICT"
+totalListings: 3
+averageRating: 4.8
+reviewCount: 28
+responseRate: 92
+hostedProperties: Array(3)
+  Property 1:
+    propertyName: "Serenity Cove Retreat - Apartment 1"
+    propertyType: "Apartment"
+    description: "Escape to our tranquil haven in Osaka. This property offers the perfect balance of convenience and serenity, allowing you to enjoy both the vibrant city life and peaceful relaxation. Modern amenities and thoughtful touches await you."
+    guestCapacity: 7
+    bedCount: 2
+    bedroomCount: 2
+    bathroomCount: 1
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (13 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\kitchen\image_13.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\kitchen\image_49.jpg"...] (3 total)
+    nightlyRateUsd: 282
+    payLaterAllowed: true
+    cancellationPolicy: "MODERATE"
+    bookingCapacity: 2
+    maxGuests: 9
+    minimumStay: 3
+    maximumStay: 24
+    sizeSqMeters: 66
+    floorNumber: 2
+    hasElevator: false
+    hasParking: false
+    hasPool: false
+    hasGym: false
+    hasWiFi: true
+    hasAirConditioning: true
+    hasHeating: true
+    hasKitchen: false
+    hasWasher: true
+    hasDryer: false
+    hasTV: true
+    hasWorkspace: true
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "16:00"
+    checkOutTime: "11:00"
+    securityDeposit: 278
+    cleaningFee: 89
+    serviceFee: 35
+    taxesAndFees: 22
+    weeklyDiscount: 15
+    monthlyDiscount: 16
+    instantBook: false
+    superhost: false
+  Property 2:
+    propertyName: "Serenity Cove Retreat - Penthouse 2"
+    propertyType: "Penthouse"
+    description: "Escape to our tranquil haven in Osaka. This property offers the perfect balance of convenience and serenity, allowing you to enjoy both the vibrant city life and peaceful relaxation. Modern amenities and thoughtful touches await you."
+    guestCapacity: 8
+    bedCount: 4
+    bedroomCount: 3
+    bathroomCount: 1
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (13 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\exterior\image_29.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\dining_room\image_45.jpg"...] (5 total)
+    nightlyRateUsd: 114
+    payLaterAllowed: true
+    cancellationPolicy: "FLEXIBLE"
+    bookingCapacity: 4
+    maxGuests: 6
+    minimumStay: 2
+    maximumStay: 25
+    sizeSqMeters: 108
+    floorNumber: 20
+    hasElevator: false
+    hasParking: true
+    hasPool: true
+    hasGym: false
+    hasWiFi: true
+    hasAirConditioning: false
+    hasHeating: true
+    hasKitchen: false
+    hasWasher: false
+    hasDryer: false
+    hasTV: true
+    hasWorkspace: false
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "15:00"
+    checkOutTime: "10:00"
+    securityDeposit: 401
+    cleaningFee: 68
+    serviceFee: 34
+    taxesAndFees: 7
+    weeklyDiscount: 6
+    monthlyDiscount: 15
+    instantBook: true
+    superhost: true
+  Property 3:
+    propertyName: "Serenity Cove Retreat - House 3"
+    propertyType: "House"
+    description: "Discover your home away from home in the heart of Osaka. Our property combines modern amenities with warm hospitality to create the perfect retreat for travelers. Relax in comfortable surroundings and explore the best that {city} has to offer."
+    guestCapacity: 3
+    bedCount: 4
+    bedroomCount: 1
+    bathroomCount: 1
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (20 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\exterior\image_12.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\exterior\image_1.jpg"...] (4 total)
+    nightlyRateUsd: 180
+    payLaterAllowed: true
+    cancellationPolicy: "STRICT"
+    bookingCapacity: 2
+    maxGuests: 8
+    minimumStay: 3
+    maximumStay: 24
+    sizeSqMeters: 51
+    floorNumber: 7
+    hasElevator: false
+    hasParking: true
+    hasPool: false
+    hasGym: false
+    hasWiFi: true
+    hasAirConditioning: true
+    hasHeating: true
+    hasKitchen: true
+    hasWasher: false
+    hasDryer: false
+    hasTV: true
+    hasWorkspace: false
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "16:00"
+    checkOutTime: "12:00"
+    securityDeposit: 149
+    cleaningFee: 71
+    serviceFee: 42
+    taxesAndFees: 17
+    weeklyDiscount: 18
+    monthlyDiscount: 24
+    instantBook: false
+    superhost: false
+createdAt: 2026-03-24T10:55:44.327Z
+updatedAt: 2026-03-24T10:55:44.327Z
+
+HOST 5 DETAILS:
+================
+_id: 52fsi5p4mkkuv8m82k3sch
+_class: "com.airbnb.user.model.User"
+userId: "dcb478d5-ec45-4058-8af1-2f6e0fab3e8d"
+email: "host5@gmail.com"
+password: "$2b$12$qfvtKxBnraUKMWRTajeKtuqh861kyso7Wb6AtYPairQltIsYIKWuW"
+firstName: "Host5"
+lastName: "Miller"
+phoneNumber: "+98834093577"
+profileImage: "https://images.unsplash.com/photo-1547161526?q=80&w=80&auto=format&fit=crop"
+bio: "Passionate about providing exceptional guest experiences. Your home away from home in Chennai."
+role: "HOST"
+status: "ACTIVE"
+emailVerified: true
+verificationStatus: "APPROVED"
+verificationRequestedAt: 2026-03-24T10:55:44.327Z
+verifiedAt: 2026-03-24T10:55:44.327Z
+street: "The Ivory Loft Street"
+area: "Chennai"
+village: "Chennai Central"
+district: "Chennai"
+division: "East"
+city: "Chennai"
+country: "India"
+zipCode: "88204"
+latitude: 16.1
+longitude: 107.9
+superhost: true
+hostDisplayName: "The Ivory Loft by Host5"
+hostAbout: "Experience the perfect blend of comfort and style in our carefully curated space. Located in the vibrant Chennai, our property offers easy access to local attractions, dining, and entertainment. Whether you're here for business or leisure, you'll find everything you need for a memorable stay."
+hostingSince: 2026-03-24T10:55:44.327Z
+preferredCheckInTime: "16:00"
+preferredCheckOutTime: "11:00"
+responseTimeHours: 18
+houseRules: "Check-in after 3pm, check-out before 11am."
+propertyTypesOffered: ["Apartment", "Loft"]
+offeringHighlights: ["Premium location in the heart of the city", "Modern amenities and comfortable furnishings", "Exceptional guest service and support"]
+hostPortfolioImages: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\view\image_13.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\exterior\image_6.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\exterior\image_31.jpg"]
+guestCapacity: 7
+bedCount: 4
+bedTypes: [{type: "King", count: 2}, {type: "Queen", count: 2}]
+nightlyRateUsd: 76
+payLaterAllowed: true
+payoutPercentage: 74
+cancellationPolicy: "FLEXIBLE"
+totalListings: 3
+averageRating: 3.6
+reviewCount: 7
+responseRate: 97
+hostedProperties: Array(3)
+  Property 1:
+    propertyName: "The Ivory Loft - Apartment 1"
+    propertyType: "Apartment"
+    description: "Immerse yourself in the local culture of Chennai from our comfortable and well-appointed accommodation. We've created a space that reflects the spirit of the city while providing all the comforts you expect from a premium stay."
+    guestCapacity: 6
+    bedCount: 2
+    bedroomCount: 3
+    bathroomCount: 2
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (18 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\exterior\image_6.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Test Data\dining_room\image_44.jpg"...] (3 total)
+    nightlyRateUsd: 285
+    payLaterAllowed: true
+    cancellationPolicy: "STRICT"
+    bookingCapacity: 5
+    maxGuests: 10
+    minimumStay: 2
+    maximumStay: 20
+    sizeSqMeters: 96
+    floorNumber: 20
+    hasElevator: true
+    hasParking: false
+    hasPool: false
+    hasGym: true
+    hasWiFi: true
+    hasAirConditioning: true
+    hasHeating: false
+    hasKitchen: false
+    hasWasher: false
+    hasDryer: true
+    hasTV: true
+    hasWorkspace: true
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "14:00"
+    checkOutTime: "11:00"
+    securityDeposit: 450
+    cleaningFee: 38
+    serviceFee: 25
+    taxesAndFees: 6
+    weeklyDiscount: 11
+    monthlyDiscount: 26
+    instantBook: false
+    superhost: false
+  Property 2:
+    propertyName: "The Ivory Loft - Loft 2"
+    propertyType: "Loft"
+    description: "Discover your home away from home in the heart of Chennai. Our property combines modern amenities with warm hospitality to create the perfect retreat for travelers. Relax in comfortable surroundings and explore the best that {city} has to offer."
+    guestCapacity: 7
+    bedCount: 1
+    bedroomCount: 3
+    bathroomCount: 2
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (9 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\view\image_13.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\view\image_28.jpg"...] (5 total)
+    nightlyRateUsd: 76
+    payLaterAllowed: true
+    cancellationPolicy: "FLEXIBLE"
+    bookingCapacity: 2
+    maxGuests: 6
+    minimumStay: 2
+    maximumStay: 10
+    sizeSqMeters: 80
+    floorNumber: 7
+    hasElevator: true
+    hasParking: true
+    hasPool: false
+    hasGym: false
+    hasWiFi: true
+    hasAirConditioning: true
+    hasHeating: true
+    hasKitchen: true
+    hasWasher: true
+    hasDryer: false
+    hasTV: true
+    hasWorkspace: false
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "14:00"
+    checkOutTime: "11:00"
+    securityDeposit: 220
+    cleaningFee: 90
+    serviceFee: 44
+    taxesAndFees: 24
+    weeklyDiscount: 5
+    monthlyDiscount: 11
+    instantBook: true
+    superhost: false
+  Property 3:
+    propertyName: "The Ivory Loft - Loft 3"
+    propertyType: "Loft"
+    description: "Escape to our tranquil haven in Chennai. This property offers the perfect balance of convenience and serenity, allowing you to enjoy both the vibrant city life and peaceful relaxation. Modern amenities and thoughtful touches await you."
+    guestCapacity: 5
+    bedCount: 4
+    bedroomCount: 1
+    bathroomCount: 2
+    amenities: ["WiFi", "Kitchen", "Air Conditioning", "Heating", "Washer"...] (17 total)
+    images: ["C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\view\image_32.jpg", "C:\Buet\CSE 326 ISD\airbnb images\Airbnb Data\Training Data\living_room\image_16.jpg"...] (3 total)
+    nightlyRateUsd: 232
+    payLaterAllowed: false
+    cancellationPolicy: "FLEXIBLE"
+    bookingCapacity: 5
+    maxGuests: 10
+    minimumStay: 1
+    maximumStay: 9
+    sizeSqMeters: 43
+    floorNumber: 14
+    hasElevator: false
+    hasParking: true
+    hasPool: false
+    hasGym: false
+    hasWiFi: true
+    hasAirConditioning: true
+    hasHeating: false
+    hasKitchen: true
+    hasWasher: true
+    hasDryer: true
+    hasTV: true
+    hasWorkspace: false
+    smokingAllowed: false
+    petsAllowed: false
+    partiesAllowed: false
+    childrenAllowed: true
+    checkInTime: "16:00"
+    checkOutTime: "10:00"
+    securityDeposit: 198
+    cleaningFee: 65
+    serviceFee: 31
+    taxesAndFees: 24
+    weeklyDiscount: 7
+    monthlyDiscount: 29
+    instantBook: true
+    superhost: false
+createdAt: 2026-03-24T10:55:44.327Z
+updatedAt: 2026-03-24T10:55:44.327Z
+
