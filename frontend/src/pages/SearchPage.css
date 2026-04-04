@@ -1,0 +1,553 @@
+.search-page {
+    padding-top: 80px; /* Navbar height */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-page__content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+    .search-page__content {
+        grid-template-columns: minmax(0, 840px) 1fr; /* Listings fixed width + flexible map */
+    }
+}
+
+.search-page__listings {
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.search-page__header {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.search-page__meta {
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.search-page__title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #222;
+}
+
+.search-page__filters {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.filter-pill {
+    padding: 8px 16px;
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+    border-color: #222;
+}
+
+.search-page__taxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+}
+
+.tax-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Listings List */
+.search-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.search-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ebebeb;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.search-card:hover {
+    opacity: 0.92;
+}
+
+@media (max-width: 744px) {
+    .search-card {
+        grid-template-columns: 1fr;
+    }
+    .search-card__image-container {
+        aspect-ratio: 16/10;
+        height: auto !important;
+    }
+}
+
+.search-card__image-container {
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.search-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.search-card:hover .search-card__img {
+    transform: scale(1.05);
+}
+
+.search-card__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-card__heart {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+}
+
+.search-card__heart svg {
+    display: block;
+    fill: rgba(0,0,0,0.5);
+    height: 24px;
+    width: 24px;
+    stroke: white;
+    stroke-width: 2px;
+    overflow: visible;
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.search-card__heart.active svg {
+    fill: #FF385C;
+    stroke: #FF385C;
+    transform: scale(1.05);
+}
+
+.search-card__heart:hover svg {
+    transform: scale(1.1);
+}
+
+.search-card__heart:active svg {
+    transform: scale(0.95);
+}
+
+.search-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search-card__subtitle {
+    font-size: 14px;
+    color: #717171;
+    margin-bottom: 4px;
+}
+
+.search-card__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+    line-height: 1.25;
+}
+
+.search-card__divider {
+    width: 32px;
+    height: 1px;
+    background: #dddddd;
+    margin: 10px 0;
+}
+
+.search-card__features {
+    font-size: 14px;
+    color: #717171;
+    margin-bottom: 4px;
+}
+
+.search-card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.search-card__rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.search-card__price {
+    text-align: right;
+}
+
+.price-val {
+    font-size: 18px;
+    font-weight: 800;
+    color: #222;
+}
+
+.price-unit {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Map Placeholder */
+.search-page__map-container {
+    background: #f7f7f7;
+    height: calc(100vh - 80px);
+    position: sticky;
+    top: 80px;
+}
+
+.search-page__map-placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .search-page__map-container {
+        display: none;
+    }
+}
+
+/* ─── Skeleton Loader ─── */
+.search-card--skeleton {
+    pointer-events: none;
+}
+
+.skeleton-pulse {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s infinite ease-in-out;
+}
+
+.search-card--skeleton .search-card__image-container {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s infinite ease-in-out;
+}
+
+@keyframes skeleton-shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ─── Empty State ─── */
+.search-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #717171;
+}
+
+.search-empty__icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.search-empty h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.search-empty p {
+    font-size: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #222;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #222;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ── Inline Search Bar ── */
+.search-page__inline-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background: #fff;
+    border-bottom: 1px solid #ebebeb;
+    position: sticky;
+    top: 80px;
+    z-index: 5;
+}
+
+.search-inline__input {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    flex: 1;
+    min-width: 0;
+    transition: border-color 0.15s;
+}
+
+.search-inline__input:focus {
+    border-color: #222;
+}
+
+.search-inline__input--date {
+    flex: 0.7;
+}
+
+.search-inline__input--guests {
+    flex: 0.4;
+    max-width: 90px;
+}
+
+.search-inline__btn {
+    padding: 10px 20px;
+    background: #ff385c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+}
+
+.search-inline__btn:hover {
+    background: #e31c5f;
+}
+
+/* ── Active filter pill ── */
+.filter-pill--active {
+    background: #222 !important;
+    color: #fff !important;
+    border-color: #222 !important;
+}
+
+/* ── Sort select in filter bar ── */
+.filter-sort-select {
+    appearance: auto;
+    padding-right: 28px;
+    font-weight: 600;
+}
+
+/* ── Toggle Switch ── */
+.toggle-switch {
+    width: 48px;
+    height: 28px;
+    background: #b0b0b0;
+    border-radius: 14px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.toggle-switch--on {
+    background: #222;
+}
+
+.toggle-switch__knob {
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.toggle-switch--on .toggle-switch__knob {
+    transform: translateX(20px);
+}
+
+@media (max-width: 744px) {
+    .search-page__inline-bar {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    .search-inline__input {
+        flex: 1 1 45%;
+    }
+    .search-inline__input--guests {
+        max-width: 100%;
+    }
+}
+
+/* ── Search Pagination ── */
+.search-page__pagination-info {
+    font-size: 14px;
+    color: #717171;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+}
+
+.search-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 24px;
+    padding: 24px 0 8px;
+    border-top: 1px solid #ebebeb;
+}
+
+.search-pagination__btn {
+    min-width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.search-pagination__btn:hover:not(:disabled):not(.search-pagination__btn--active) {
+    background: #f7f7f7;
+    border-color: #222;
+}
+
+.search-pagination__btn--active {
+    background: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+.search-pagination__btn--arrow {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.search-pagination__btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.search-pagination__dots {
+    min-width: 24px;
+    text-align: center;
+    font-size: 16px;
+    color: #717171;
+    user-select: none;
+}
+
+/* ── Search Footer ── */
+.search-page__footer {
+    margin-top: 32px;
+    border-top: 1px solid #ebebeb;
+}
