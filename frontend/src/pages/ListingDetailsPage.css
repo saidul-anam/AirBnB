@@ -1,0 +1,333 @@
+.listing-page {
+    padding-bottom: 50px;
+}
+
+.listing-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+    margin: 0 auto;
+    padding: 24px;
+    padding-top: 100px;
+}
+
+.listing-container h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #222;
+}
+
+.listing-gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+    margin-top: 24px;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 400px;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.sub-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.sub-imgs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s;
+}
+
+.sub-imgs img:hover {
+    opacity: 0.85;
+}
+
+.listing-content {
+    display: flex;
+    gap: 60px;
+    margin-top: 32px;
+}
+
+.listing-info {
+    flex: 2;
+}
+
+.listing-info h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.listing-specs {
+    color: #717171;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.listing-superhost {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+}
+
+.listing-superhost__icon {
+    font-size: 28px;
+}
+
+.listing-superhost strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.listing-superhost p {
+    font-size: 14px;
+    color: #717171;
+    margin: 0;
+}
+
+.listing-hr {
+    border: none;
+    border-top: 1px solid #ebebeb;
+    margin: 24px 0;
+}
+
+.listing-about h3,
+.listing-amenities h3,
+.listing-rules h3,
+.listing-location h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.listing-about p,
+.listing-rules p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #484848;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.amenity-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    padding: 8px 0;
+}
+
+.amenity-icon {
+    color: #222;
+    width: 20px;
+    min-width: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.listing-location p {
+    color: #717171;
+    font-size: 16px;
+}
+
+/* ─── Booking Card ─── */
+.booking-card {
+    flex: 1;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.booking-card__price {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.booking-card__rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.booking-card__dot {
+    margin: 0 4px;
+}
+
+.date-inputs {
+    display: flex;
+    border: 1px solid #b0b0b0;
+    border-radius: 8px;
+    margin-top: 16px;
+    overflow: hidden;
+}
+
+.input-group {
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid #b0b0b0;
+}
+
+.input-group:last-child {
+    border-right: none;
+}
+
+.input-group label {
+    font-size: 10px;
+    font-weight: 800;
+    display: block;
+}
+
+.input-group input {
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+}
+
+.guests-input {
+    margin-top: 0;
+    border: 1px solid #b0b0b0;
+    border-top: none;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+}
+
+.guests-input label {
+    font-size: 10px;
+    font-weight: 800;
+    display: block;
+}
+
+.reserve-btn {
+    width: 100%;
+    background: linear-gradient(to right, #e61e4d, #e31c5f, #d70466);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.reserve-btn:hover {
+    opacity: 0.9;
+}
+
+.booking-card__note {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 8px;
+    color: #717171;
+}
+
+/* ─── Price Breakdown ─── */
+.booking-card__breakdown {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ebebeb;
+}
+
+.breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.breakdown-row span:first-child {
+    text-decoration: underline;
+    color: #484848;
+}
+
+.breakdown-row--total {
+    padding-top: 16px;
+    border-top: 1px solid #ebebeb;
+    font-weight: 600;
+}
+
+.breakdown-row--total span:first-child {
+    text-decoration: none;
+    color: #222;
+}
+
+/* ─── Loading Skeleton (from SearchPage) ─── */
+.listing-loading .skeleton-pulse {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s infinite ease-in-out;
+}
+
+@keyframes skeleton-shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+    .listing-content {
+        flex-direction: column;
+    }
+
+    .listing-gallery {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .sub-imgs {
+        display: none;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pay Later Badge */
+.booking-card__pay-later-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
