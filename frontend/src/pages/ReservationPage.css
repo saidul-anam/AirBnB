@@ -1,0 +1,452 @@
+.reservation-page {
+    min-height: 100vh;
+    background: #fff;
+}
+
+.reservation-container {
+    max-width: 1300px;
+    padding: 0 40px;
+    margin: 0 auto;
+    padding: 24px;
+    padding-top: 100px;
+}
+
+.res-back-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 0;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.res-back-btn:hover {
+    text-decoration: underline;
+}
+
+.reservation-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 32px;
+}
+
+.reservation-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+    .reservation-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .reservation-summary {
+        order: -1;
+    }
+}
+
+/* ─── Sections ─── */
+.res-section {
+    margin-bottom: 8px;
+}
+
+.res-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 16px;
+}
+
+.res-divider {
+    height: 1px;
+    background: #ebebeb;
+    margin: 24px 0;
+}
+
+/* ─── Trip Details ─── */
+.res-trip-row {
+    margin-bottom: 16px;
+}
+
+.res-trip-label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.res-date-inputs {
+    display: flex;
+    gap: 12px;
+}
+
+.res-date-group {
+    flex: 1;
+}
+
+.res-date-group label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+    color: #484848;
+}
+
+.res-date-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b0b0b0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.res-date-group input:focus {
+    border-color: #222;
+}
+
+.res-guest-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b0b0b0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: white;
+    cursor: pointer;
+}
+
+/* ─── Payment ─── */
+.res-pay-option {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.res-radio-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.res-radio-label:hover {
+    border-color: #222;
+}
+
+.res-radio-label input[type="radio"] {
+    margin-top: 4px;
+    width: 20px;
+    height: 20px;
+    accent-color: #222;
+    flex-shrink: 0;
+}
+
+.res-radio-label strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.res-radio-label p {
+    font-size: 14px;
+    color: #717171;
+    margin: 0;
+}
+
+.res-pay-note {
+    font-size: 14px;
+    color: #717171;
+    margin-bottom: 16px;
+}
+
+.res-card-form {
+    border: 1px solid #b0b0b0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.res-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    border-bottom: 1px solid #ebebeb;
+    font-weight: 500;
+}
+
+.res-card-fields {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.res-input {
+    padding: 12px;
+    border: 1px solid #b0b0b0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.res-input:focus {
+    border-color: #222;
+}
+
+.res-input--full {
+    width: 100%;
+}
+
+.res-card-row {
+    display: flex;
+    gap: 12px;
+}
+
+.res-card-row .res-input {
+    flex: 1;
+}
+
+/* ─── Policy ─── */
+.res-policy {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #484848;
+}
+
+.res-rules-list {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+.res-rules-list li {
+    font-size: 15px;
+    color: #484848;
+    margin-bottom: 6px;
+}
+
+/* ─── Submit ─── */
+.res-submit-area {
+    margin-top: 8px;
+}
+
+.res-agree-text {
+    font-size: 12px;
+    color: #717171;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.res-btn {
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.res-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.res-btn--primary {
+    background: linear-gradient(to right, #E61E4D, #E31C5F, #D70466);
+    color: white;
+    width: 100%;
+}
+
+.res-btn--primary:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.res-btn--secondary {
+    background: white;
+    color: #222;
+    border: 1px solid #222;
+}
+
+/* ─── Summary Card ─── */
+.reservation-summary {
+    position: sticky;
+    top: 100px;
+}
+
+.res-summary-card {
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.res-summary-header {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.res-summary-img {
+    width: 130px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.res-summary-info {
+    flex: 1;
+}
+
+.res-summary-type {
+    font-size: 12px;
+    color: #717171;
+    margin-bottom: 2px;
+}
+
+.res-summary-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.res-summary-rating {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.res-summary-divider {
+    height: 1px;
+    background: #ebebeb;
+    margin: 20px 0;
+}
+
+.res-summary-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.res-price-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.res-price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.res-price-row span:first-child {
+    color: #484848;
+    text-decoration: underline;
+}
+
+.res-price-row--total {
+    padding-top: 16px;
+    border-top: 1px solid #ebebeb;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.res-price-row--total span:first-child {
+    text-decoration: none;
+    color: #222;
+}
+
+.res-no-dates {
+    font-size: 14px;
+    color: #717171;
+    font-style: italic;
+}
+
+/* ─── Loading ─── */
+.reservation-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    gap: 16px;
+    color: #717171;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #ebebeb;
+    border-top-color: #222;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ─── Pay Later Styles ─── */
+.res-pay-info-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.res-pay-note-box {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background: #fff9e6;
+    border: 1px solid #ffd700;
+    border-radius: 8px;
+    align-items: flex-start;
+}
+
+.res-pay-note-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.res-pay-note-box strong {
+    display: block;
+    color: #222;
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+.res-pay-note-box p {
+    color: #717171;
+    font-size: 14px;
+    margin: 0;
+}
