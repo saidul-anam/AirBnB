@@ -1,0 +1,303 @@
+.admin-bookings-page {
+    min-height: 100vh;
+    background: #fafafa;
+}
+
+.admin-bookings-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 24px;
+    padding-top: 100px;
+}
+
+.admin-bookings-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.admin-bookings-subtitle {
+    font-size: 16px;
+    color: #717171;
+    margin-bottom: 24px;
+}
+
+/* ─── Stats Cards ─── */
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.admin-stat-card {
+    background: white;
+    border: 2px solid #ebebeb;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.admin-stat-card:hover {
+    border-color: #222;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.admin-stat-card--active {
+    border-color: #222 !important;
+    background: #f7f7f7;
+}
+
+.admin-stat-icon {
+    font-size: 24px;
+}
+
+.admin-stat-count {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+}
+
+.admin-stat-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #717171;
+    text-transform: uppercase;
+}
+
+/* ─── Filter Pills ─── */
+.admin-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.admin-filter-pill {
+    padding: 8px 16px;
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.admin-filter-pill:hover {
+    border-color: #222;
+}
+
+.admin-filter-pill--active {
+    background: #222;
+    color: white;
+    border-color: #222;
+}
+
+/* ─── Table ─── */
+.admin-table-wrapper {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table thead {
+    background: #f7f7f7;
+}
+
+.admin-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #717171;
+    border-bottom: 1px solid #ebebeb;
+    white-space: nowrap;
+}
+
+.admin-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #222;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.admin-table tbody tr:hover {
+    background: #fafafa;
+}
+
+.admin-td-id {
+    font-family: monospace;
+    font-size: 13px;
+    color: #717171;
+}
+
+.admin-td-price {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.admin-user-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.admin-user-cell strong {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.admin-user-cell small {
+    font-size: 12px;
+    color: #999;
+}
+
+.admin-dates-cell {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.admin-date-arrow {
+    color: #b0b0b0;
+}
+
+/* ─── Badges ─── */
+.admin-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* ─── Action Buttons ─── */
+.admin-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.admin-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+
+.admin-btn:hover {
+    opacity: 0.85;
+}
+
+.admin-btn--approve {
+    background: #28a745;
+    color: white;
+}
+
+.admin-btn--reject {
+    background: white;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.admin-btn--reject:hover {
+    background: #fff0f3;
+}
+
+.admin-btn--checkin {
+    background: #007bff;
+    color: white;
+}
+
+.admin-btn--complete {
+    background: #17a2b8;
+    color: white;
+}
+
+.admin-btn--refund {
+    background: #6c757d;
+    color: white;
+}
+
+.admin-btn--payout-done {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+    cursor: default;
+    pointer-events: none;
+}
+
+.admin-cancellation-reason {
+    font-size: 12px;
+    color: #721c24;
+    background: #f8d7da;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-top: 4px;
+    max-width: 200px;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.admin-no-action {
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+/* ─── Loading & Empty ─── */
+.admin-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+    gap: 16px;
+    color: #717171;
+}
+
+.admin-empty {
+    text-align: center;
+    padding: 60px 0;
+    color: #717171;
+}
+
+.admin-empty h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #ebebeb;
+    border-top-color: #222;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
