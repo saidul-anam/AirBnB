@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: isd-airbnb-monolith
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./backend/monolith/Dockerfile
+    dockerContext: ./backend/monolith
+    healthCheckPath: /actuator/health
+    autoDeployTrigger: commit
+    buildFilter:
+      paths:
+        - backend/monolith/**
+        - render.yaml
+    envVars:
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRY
+        sync: false
+      - key: JWT_REFRESH_EXPIRY
+        sync: false
+      - key: MONGO_URI_USER
+        sync: false
+      - key: MONGO_URI_BOOKING
+        sync: false
+      - key: MONGO_URI_REVIEWS
+        sync: false
+      - key: MONGO_URI_NOTIFICATION
+        sync: false
+      - key: MONGO_URI_AVAILABILITY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: FRONTEND_BASE_URL
+        sync: false
