@@ -1,0 +1,36 @@
+Backend:
+
+1. Keep the existing root `.env` file with the current MongoDB, JWT, and Supabase values.
+2. Start the monolith with Docker:
+
+   docker compose up --build
+
+   or start it with Maven after loading `.env` into the current PowerShell session:
+
+   $envLines = Get-Content .env | Where-Object { $_ -match '^[A-Za-z_][A-Za-z0-9_]*=' }
+   foreach ($line in $envLines) { $name, $value = $line -split '=', 2; [System.Environment]::SetEnvironmentVariable($name, $value, 'Process') }
+   cd backend\monolith
+   mvn spring-boot:run
+
+3. Backend URL:
+
+   http://localhost:8080
+
+Frontend:
+
+1. Open a new terminal.
+2. Run:
+
+   cd frontend
+   npm install
+   npm start
+
+3. Frontend URL:
+
+   http://localhost:3000
+
+Deployment:
+
+- Render backend blueprint: `render.yaml`
+- Vercel frontend root: `frontend`
+- Set `REACT_APP_API_BASE_URL` in Vercel to your Render backend URL
