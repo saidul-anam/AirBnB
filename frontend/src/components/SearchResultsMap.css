@@ -1,0 +1,49 @@
+.price-marker {
+  background-color: white;
+  border-radius: 28px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+  color: #222;
+  font-weight: 800;
+  padding: 5px 10px;
+  border: 1px solid rgba(0,0,0,0.04);
+  font-size: 14px;
+  text-align: center;
+  width: auto !important;
+  height: auto !important;
+  white-space: nowrap;
+  transition: transform 0.2s, background-color 0.2s;
+  cursor: pointer;
+}
+
+.price-marker:hover {
+  transform: scale(1.1);
+  z-index: 999 !important;
+  background-color: #222;
+  color: white;
+}
+
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.map-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #717171;
+  font-size: 16px;
+  gap: 12px;
+}
+
+.map-empty__icon {
+  font-size: 48px;
+}
+
+/* Fix Leaflet container sizing */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+}
