@@ -1,0 +1,496 @@
+/* ───────────────────────────────────────────────
+   InboxPage.css  —  Messenger-style chat layout
+   ─────────────────────────────────────────────── */
+
+.inbox-page {
+  display: flex;
+  height: calc(100vh - 80px);
+  max-width: 1200px;
+  margin: 80px auto 0;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ── Sidebar ── */
+.inbox-sidebar {
+  width: 360px;
+  min-width: 320px;
+  border-right: 1px solid #ebebeb;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+}
+
+.inbox-sidebar__header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.inbox-sidebar__header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.inbox-sidebar__list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.inbox-sidebar__empty {
+  padding: 40px 24px;
+  text-align: center;
+  color: #717171;
+}
+
+.inbox-sidebar__empty p {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.inbox-sidebar__empty span {
+  font-size: 13px;
+}
+
+/* ── Conversation item ── */
+.inbox-convo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px 24px;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.inbox-convo:hover {
+  background: #f0f0f0;
+}
+
+.inbox-convo--active {
+  background: #fff;
+  border-left: 3px solid #FF385C;
+}
+
+.inbox-convo__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.inbox-convo__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inbox-convo__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.inbox-convo__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.inbox-convo__name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #222;
+}
+
+.inbox-convo__time {
+  font-size: 12px;
+  color: #999;
+  flex-shrink: 0;
+}
+
+.inbox-convo__preview {
+  font-size: 13px;
+  color: #717171;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+/* ── Chat Area ── */
+.inbox-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.inbox-chat__empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #717171;
+}
+
+.inbox-chat__empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.inbox-chat__empty h3 {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.inbox-chat__empty p {
+  font-size: 14px;
+}
+
+/* Chat header */
+.inbox-chat__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #ebebeb;
+  background: #fff;
+}
+
+.inbox-chat__header-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.inbox-chat__header-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inbox-chat__header-info {
+  flex: 1;
+}
+
+.inbox-chat__header-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.inbox-chat__header-role {
+  font-size: 12px;
+  color: #717171;
+  text-transform: capitalize;
+}
+
+.inbox-chat__view-profile {
+  padding: 8px 16px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.inbox-chat__view-profile:hover {
+  background: #222;
+  color: #fff;
+}
+
+/* Messages area */
+.inbox-chat__messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 60px 24px 24px 24px; /* Increased top padding to 60px to prevent first message reaction picker cutoff */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fafafa;
+}
+
+.inbox-chat__loading,
+.inbox-chat__no-messages {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #717171;
+  font-size: 14px;
+}
+
+/* Message bubbles */
+.inbox-msg {
+  display: flex;
+  gap: 8px;
+  max-width: 70%;
+}
+
+.inbox-msg--sent {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.inbox-msg--received {
+  align-self: flex-start;
+}
+
+.inbox-msg__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.inbox-msg__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inbox-msg__bubble {
+  padding: 10px 16px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.45;
+  position: relative;
+}
+
+.inbox-msg--sent .inbox-msg__bubble {
+  background: #FF385C;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.inbox-msg--received .inbox-msg__bubble {
+  background: #fff;
+  color: #222;
+  border: 1px solid #e8e8e8;
+  border-bottom-left-radius: 4px;
+}
+
+.inbox-msg__bubble p {
+  margin: 0;
+  word-break: break-word;
+}
+
+.inbox-msg__time {
+  display: block;
+  font-size: 10px;
+  margin-top: 4px;
+  opacity: 0.7;
+}
+
+.inbox-msg--sent .inbox-msg__time {
+  text-align: right;
+}
+
+/* Input area */
+.inbox-chat__input {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #ebebeb;
+  background: #fff;
+}
+
+.inbox-chat__attach-btn {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #717171;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.inbox-chat__attach-btn:hover {
+  background: #f0f0f0;
+  color: #222;
+}
+
+.inbox-chat__input textarea {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  max-height: 120px;
+  background-color: #f7f7f9;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.inbox-chat__input textarea:focus {
+  background-color: #fff;
+  border-color: #FF385C;
+  box-shadow: 0 0 0 1px #FF385C;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.inbox-chat__send {
+  padding: 10px 24px;
+  background: #FF385C;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.inbox-chat__send:hover {
+  background: #E0294E;
+}
+
+.inbox-chat__send:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+.inbox-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: #717171;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .inbox-page {
+    flex-direction: column;
+    border-radius: 0;
+    margin: 60px 0 0;
+  }
+
+  .inbox-sidebar {
+    width: 100%;
+    min-width: unset;
+    max-height: 40vh;
+    border-right: none;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .inbox-msg {
+    max-width: 85%;
+  }
+}
+
+/* ── Reactions ── */
+
+.inbox-msg__content-area {
+  position: relative;
+}
+
+.reaction-trigger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #717171;
+  opacity: 0;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s, background 0.2s;
+}
+
+.inbox-msg:hover .reaction-trigger-btn {
+  opacity: 0.6;
+}
+
+.reaction-trigger-btn:hover {
+  background: #f0f0f0;
+  opacity: 1 !important;
+}
+
+.reaction-picker {
+  position: absolute;
+  top: -45px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 24px;
+  padding: 4px 8px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.reaction-emoji {
+  cursor: pointer;
+  font-size: 20px;
+  transition: transform 0.15s ease-out;
+  padding: 2px 4px;
+}
+
+.reaction-emoji:hover {
+  transform: scale(1.3);
+}
+
+.reaction-display {
+  display: flex;
+  gap: 4px;
+  margin-top: -10px;
+  z-index: 5;
+  background: #fff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid #ebebeb;
+  font-size: 11px;
+}
